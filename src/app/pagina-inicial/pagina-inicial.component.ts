@@ -8,8 +8,7 @@ import { RespuestaClienteComponent } from './respuesta-cliente/respuesta-cliente
   styleUrls: ['./pagina-inicial.component.css']
 })
 export class PaginaInicialComponent implements OnInit{
-  
-  codigo!: string;
+  codigo: string='';
   constructor(
     public dialog: MatDialog
   ) { }
@@ -23,6 +22,11 @@ export class PaginaInicialComponent implements OnInit{
       width:'600px',
       data: {codigo: this.codigo}
     });
+  }
+  validarNumeros(event: any) {
+    const input = event.target;
+    const value = input.value;
+    input.value = value.replace(/[^0-9]/g, '');
   }
 
 }

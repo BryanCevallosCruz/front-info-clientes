@@ -4,20 +4,20 @@
 
 <div>
     <div class="busqueda">
-        <input type="text" class="long-input" required maxLength="10" minlength="10"
-            [(ngModel)]="codigo" placeholder="Ingrese el código de la persona 10(dígitos)">
+        <input type="text" class="long-input" required maxLength="9" (input)="validarNumeros($event)" 
+            [(ngModel)]="codigo" placeholder="Ingrese el código de la persona 9 (dígitos)">
     </div>
 
     <div class="botones-busqueda">
         <div class="row col-12 d-flex justify-content-center botones">
             <div class="col-md-3 col-6 boton-grid">
-                <button mat-raised-button color="primary" (click)=" buscarCliente()">
+                <button [disabled]="codigo.length !== 9" mat-raised-button color="primary" (click)=" buscarCliente()">
                     Buscar Cliente
                     <mat-icon fontIcon="search"></mat-icon>
                 </button>
             </div>
             <div class="col-md-3 col-6 boton-grid">
-                <button mat-raised-button color="primary" (click)=" buscarCliente()">
+                <button [disabled]="codigo.length !== 9" mat-raised-button color="primary" (click)=" buscarCliente()">
                     Buscar Empleado
                     <mat-icon fontIcon="search"></mat-icon>
                 </button>

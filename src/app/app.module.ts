@@ -11,6 +11,11 @@ import { RespuestaClienteComponent } from './pagina-inicial/respuesta-cliente/re
 import { RespuestaEmpleadoComponent } from './pagina-inicial/respuesta-empleado/respuesta-empleado.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -27,7 +32,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     FormsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
