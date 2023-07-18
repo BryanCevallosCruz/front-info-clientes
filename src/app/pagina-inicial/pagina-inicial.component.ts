@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RespuestaClienteComponent } from './respuesta-cliente/respuesta-cliente.component';
+import { RespuestaEmpleadoComponent } from './respuesta-empleado/respuesta-empleado.component';
 
 @Component({
   selector: 'app-pagina-inicial',
@@ -19,6 +20,13 @@ export class PaginaInicialComponent implements OnInit{
   buscarCliente(){
     console.log(this.codigo);
     this.dialog.open(RespuestaClienteComponent,{
+      width:'600px',
+      data: {codigo: this.codigo}
+    });
+  }
+
+  buscarEmpleado(){
+    this.dialog.open(RespuestaEmpleadoComponent,{
       width:'600px',
       data: {codigo: this.codigo}
     });

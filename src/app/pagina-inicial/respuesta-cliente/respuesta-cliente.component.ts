@@ -26,10 +26,6 @@ export class RespuestaClienteComponent implements OnInit  {
   ngOnInit(): void {
   }
 
-  listo(){
-    
-  }
-
   getClientes(codigo: string){
     if (this.clientes === undefined) {
       console.log('El elemento es nulo');

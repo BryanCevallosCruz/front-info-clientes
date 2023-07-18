@@ -1,1 +1,47 @@
-<p>respuesta-empleado works!</p>
+<header>
+    <h1 class="encabezado">INFORMACIÓN DE EMPLEADO</h1>
+</header>
+
+<div class="contenido" *ngIf="mostrar; else elseTemplate">
+    <div class="row col-12 d-flex justify-content-center tabla">
+        <div class="col-6 celda-title"> Nombre </div>
+        <div class="col-6 celda"> {{empleado.nombre}} </div>
+        <div class="col-6 celda-title"> Apellido </div>
+        <div class="col-6 celda"> {{empleado.apellido}} </div>
+        <div class="col-6 celda-title"> Edad </div>
+        <div class="col-6 celda"> {{empleado.edad}} </div>
+        <div class="col-6 celda-title"> Número de cuenta </div>
+        <div class="col-6 celda"> {{empleado.numeroCuenta}} </div>
+        <div class="col-6 celda-title"> Fecha de creación </div>
+        <div class="col-6 celda"> {{empleado.cargoEmpleado}} </div>
+        <div class="col-6 celda-title"> Movimientos </div>
+        <div class="col-6 celda">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Motivo</th>
+                        <th>Valor</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let dato of empleado.movimientos">
+                        <td>{{ dato.tipoMovimiento}}</td>
+                        <td>${{ dato.valorMovimiento }}</td>
+                        <td>{{ dato.detalle }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6 celda-title"> Saldo actual </div>
+        <div class="col-6 celda"> $ {{empleado.saldoActual}} </div>
+
+    </div>
+</div>
+<ng-template #elseTemplate>
+    <p class="informativo">No existe ningun empleado con el código {{codigo}}</p>
+</ng-template>
+
+<div class="botones">
+    <button mat-raised-button mat-dialog-close>Ok</button>
+</div>

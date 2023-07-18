@@ -17,11 +17,28 @@
                 </button>
             </div>
             <div class="col-md-3 col-6 boton-grid">
-                <button [disabled]="codigo.length !== 9" mat-raised-button color="primary" (click)=" buscarCliente()">
+                <button [disabled]="codigo.length !== 9" mat-raised-button color="primary" (click)=" buscarEmpleado()">
                     Buscar Empleado
                     <mat-icon fontIcon="search"></mat-icon>
                 </button>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="informacion">
+    <div class="cuadro-informativo">
+        * Solo se permite ingresar número.<br>
+        * Un Empleado tambien es Cliente.<br>
+        * Códigos de ejemplo de solo Clientes:<br>
+        - 012000000 <br>
+        - 022200077 <br>
+        - 022115055 <br>
+        * Códigos de ejemplo de Empleados:<br>
+        - 012345678 <br>
+        - 012345009 <br>
+        - 012345000 <br>
+        - 012300011 <br>
+
     </div>
 </div>

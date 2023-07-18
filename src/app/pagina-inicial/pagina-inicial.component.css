@@ -13,8 +13,8 @@
     max-width: 800px;
 }
 
-.botones {    
-    text-align: center;   
+.botones {
+    text-align: center;
 }
 
 .busqueda {
@@ -26,8 +26,8 @@
 
 .long-input {
     width: 400px;
-  }
-  
+}
+
 
 .botones-busqueda {
     width: 100%;
@@ -37,10 +37,10 @@
 }
 
 .boton-grid {
-    padding:1rem
+    padding: 1rem
 }
 
-.select-acto{
+.select-acto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,4 +57,21 @@
 
 .controles mat-form-field {
     margin: 7px 0;
+}
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.cuadro-informativo {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
